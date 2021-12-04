@@ -16,6 +16,7 @@ const App = () => {
     const [character, setCharacter] = useState();
     const [duplicate, setDuplicate] = useState(false);
     const [savedChar, setSaved] = useState();
+    const [baseText, setBase] = useState('Tell us a story about your character!')
     const rollTheBones = (min, max) => {
         let arr = []
         var one = Math.floor(Math.random() * (max - min + 1) + min)
@@ -81,7 +82,7 @@ const App = () => {
             flaw: flaw,
         }
         setCharacter(character)
-        document.getElementById('characterStory').value = 'Tell us a story about your character!'
+        setBase('Tell us a story!')
         setDuplicate(false)
     }
 
@@ -89,7 +90,7 @@ const App = () => {
         let story = document.getElementById('characterStory').value
         if (!duplicate) {
             setDuplicate(true)
-            document.getElementById('characterStory').value = 'Tell us a story about your character!'
+            setBase('Tell us a story about your character!')
             axios.post('/characters', {character, story}).then((response) => {
                 console.log(response)
             }).catch((error) => {
@@ -109,6 +110,10 @@ const App = () => {
         generateCharacter();
     }, [])
 
+    useEffect(() => {
+    console.log(baseText)
+    }, [character])
+
     return (
         <AppContext.Provider value={{character, savedChar}}>
         <div>
@@ -117,7 +122,7 @@ const App = () => {
         <div id="boxContainer">
         <div id="explanation">
             <p>Welcome to my Dungeons & Dragons random character generator!</p>
-            <textarea id="characterStory" rows="15" cols="50">Tell us a story about your character!</textarea>
+            <textarea id="characterStory" rows="15" cols="50">{baseText}</textarea>
         </div>
         <div id="characterSheet">
             <CharSheet key={1} />

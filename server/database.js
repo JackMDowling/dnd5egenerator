@@ -44,6 +44,7 @@ const saveCharacter = (data) => {
     doc.race = character.race
     doc.name = character.name
     doc.alignment = character.alignment
+    doc.gender = character.gender
     doc.str = character.str
     doc.dex = character.dex
     doc.con = character.con

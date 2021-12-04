@@ -17,15 +17,17 @@ body, html {
 
 #explanation {
     order: 2;
+    flex-basis: 50%;
 
 }
 
 #characterSheet {
     order: 1;
     word-wrap: break-word;
-    text-align: center;
-
-   
+    flex-basis: 50%;
+}
+#centerText {
+    text-align: center ;
 }
 
 #buttonContainer {
