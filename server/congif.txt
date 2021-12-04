@@ -1,0 +1,1 @@
+mongodb+srv://gastronomicus26:23RNdqWuGCMWLv8@hr-mvp.bgiag.mongodb.net/myFirstDatabase?retryWrites=true&w=majority

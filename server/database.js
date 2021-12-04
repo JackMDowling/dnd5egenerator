@@ -18,7 +18,11 @@ const characterSchema = mongoose.Schema({
     story: String,
 })
 
-mongoose.connect('mongodb://localhost:27017/dnd', {
+if (process.env.NODE_ENV === 'production') {
+    var uri = process.env.MONGODB_URI;
+} else uri = 'mongodb://localhost:27017/dnd'
+
+mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
