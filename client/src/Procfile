@@ -1,1 +1,2 @@
+web: npm run pack
 web: npm start
