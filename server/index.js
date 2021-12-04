@@ -18,7 +18,7 @@ app.get('/characters', async (req, res) => {
     res.send(data)
 })
 
-app.listen(5151, console.log('Connected to the 5e Generator!'));
+app.listen(process.env.PORT || 5151, console.log('Connected to the 5e Generator!'));
 
 // if process.env.NODE_ENV === production/deployment
 // node environment variables
