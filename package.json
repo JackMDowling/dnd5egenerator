@@ -19,12 +19,15 @@
   },
   "homepage": "https://github.com/JackMDowling/dnd5egenerator#readme",
   "dependencies": {
+    "axios": "^0.24.0",
     "babel": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "eslint": "^8.3.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.2.1",
+    "mongoose": "^6.0.14",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "express": "^4.17.1"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",

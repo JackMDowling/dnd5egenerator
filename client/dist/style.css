@@ -1,0 +1,38 @@
+body, html {
+    height: 100%;
+}
+
+#app {
+    background-image: url("https://wallpaperaccess.com/full/2796640.jpg");
+    height: 100%;
+}
+
+#boxContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+#explanation {
+    order: 2;
+
+}
+
+#characterSheet {
+    order: 1;
+    word-wrap: break-word;
+   
+}
+
+#buttonContainer {
+    margin:auto;
+    width: 70%;
+    height: 5%;
+    position: fixed;
+}
+
+h2 {
+  margin: auto;
+  width: 30%;
+}
