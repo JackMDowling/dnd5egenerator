@@ -9,6 +9,7 @@ import maleFirstNames from "./data/malFirst.js";
 import femFirstNames from "./data/femFirst.js";
 import surnames from "./data/surname.js";
 import CharSheet from "./CharSheet.jsx";
+import SavedChar from "./SavedChar.jsx";
 
 
 const App = () => {
@@ -80,14 +81,15 @@ const App = () => {
             flaw: flaw,
         }
         setCharacter(character)
+        document.getElementById('characterStory').value = 'Tell us a story about your character!'
         setDuplicate(false)
     }
 
     const saveCharacter = () => {
         let story = document.getElementById('characterStory').value
-        console.log(character, story)
         if (!duplicate) {
             setDuplicate(true)
+            document.getElementById('characterStory').value = 'Tell us a story about your character!'
             axios.post('/characters', {character, story}).then((response) => {
                 console.log(response)
             }).catch((error) => {
@@ -126,8 +128,9 @@ const App = () => {
         <button onClick={saveCharacter}>Save</button>
         <button onClick={findCharacter}>Find a Character</button>
         </span>
+        <br></br>
         <div id="savedCharacterContainer">
-
+           <SavedChar key={2} />
         </div>
         </div>
         </AppContext.Provider>

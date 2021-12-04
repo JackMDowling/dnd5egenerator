@@ -1,16 +1,17 @@
 body, html {
-    height: 100%;
+    height: 105%;
 }
 
 #app {
-    background-image: url("https://wallpaperaccess.com/full/2796640.jpg");
-    height: 100%;
+    background-image: url("https://wallpapercave.com/wp/wp2021765.jpg");
+    height: 105%;
+    font-family: 'MedievalSharp', cursive;
 }
 
 #boxContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 
@@ -22,6 +23,8 @@ body, html {
 #characterSheet {
     order: 1;
     word-wrap: break-word;
+    text-align: center;
+
    
 }
 
@@ -29,10 +32,14 @@ body, html {
     margin:auto;
     width: 70%;
     height: 5%;
-    position: fixed;
+    position: absolute;
 }
 
 h2 {
   margin: auto;
   width: 30%;
+}
+
+#savedCharacterContainer {
+    text-align: center;
 }
